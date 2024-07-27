@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "test@gmail.com",
+      "password": "Test@1234",
+      "mobileNumber": "91-9876543210"
+    },
+    {
+      "id": "d459",
+      "email": "test2@gmail.com",
+      "password": "Test@123",
+      "mobileNumber": "91-8451256235"
+    },
+    {
+      "id": "ea79",
+      "email": "test3@gmail.com",
+      "password": "Test@123",
+      "mobileNumber": "91-8451256235"
+    }
+  ]
+}
