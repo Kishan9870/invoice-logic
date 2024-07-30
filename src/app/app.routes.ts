@@ -5,11 +5,11 @@ import { AddProductComponent } from './modules/product/add-product/add-product.c
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'login',
     component: LoginComponent,
   },
   {
-    path: 'signup',
+    path: '',
     component: SignupComponent,
   },
   {

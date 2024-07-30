@@ -25,25 +25,38 @@ export class LoginComponent {
     password: '',
   };
 
+  // authenticate() {
+  //   this.authService.getUserByEmail(this.user.email).subscribe(
+  //     (result) => {
+  //       if (result.length > 0) {
+  //         const user = result[0];
+  //         if (this.user.password === user.password) {
+  //           this.toastrService.success('Login successful');
+  //           this.router.navigateByUrl('/add-product');
+  //         } else {
+  //           this.toastrService.error('Login failed: Incorrect password');
+  //         }
+  //       } else {
+  //         this.toastrService.error('Login failed: User not found');
+  //       }
+  //     },
+  //     (error) => {
+  //       console.log('Error', error);
+  //       this.toastrService.error('Login failed: Server error');
+  //     }
+  //   );
+  // }
+
   authenticate() {
-    this.authService.getUserByEmail(this.user.email).subscribe(
-      (result) => {
-        if (result.length > 0) {
-          const user = result[0];
-          if (this.user.password === user.password) {
-            this.toastrService.success('Login successful');
-            this.router.navigateByUrl('/add-product');
-          } else {
-            this.toastrService.error('Login failed: Incorrect password');
-          }
+    this.authService
+      .authenticate(this.user.email, this.user.password)
+      .subscribe((isAuthenticated) => {
+        if (isAuthenticated) {
+          this.toastrService.success('User authenticated successfully');
+          this.router.navigateByUrl('/add-product');
         } else {
-          this.toastrService.error('Login failed: User not found');
+          this.toastrService.error('Authentication failed');
         }
-      },
-      (error) => {
-        console.log('Error', error);
-        this.toastrService.error('Login failed: Server error');
-      }
-    );
+      });
   }
 }

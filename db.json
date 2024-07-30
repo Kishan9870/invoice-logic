@@ -17,6 +17,33 @@
       "email": "test3@gmail.com",
       "password": "Test@123",
       "mobileNumber": "91-8451256235"
+    },
+    {
+      "id": "40d7",
+      "firstName": "test",
+      "lastName": "tesdt",
+      "email": "test@123.com",
+      "password": "123456789",
+      "mobileNumber": "9874512554",
+      "address": "testaddress"
+    },
+    {
+      "id": "76b4",
+      "firstName": "Kishan",
+      "lastName": "Thummar",
+      "email": "kishan.infiadd@gmail.com",
+      "password": "Test@1234",
+      "mobileNumber": "7801840040",
+      "address": "Test Address, Surat"
+    },
+    {
+      "id": "dba9",
+      "firstName": "Brijesh",
+      "lastName": "Navadiya",
+      "email": "bn@gmail.com",
+      "password": "Test@1234",
+      "mobileNumber": "9745124512",
+      "address": "Test Address "
     }
   ]
 }
