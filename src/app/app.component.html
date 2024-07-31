@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<div class="flex">
+  <div *ngIf="!hideSidebarAndNavbar" class="w-64 h-screen bg-gray-100">
+    <!-- Side Navbar -->
+    <app-side-navbar></app-side-navbar>
+  </div>
+  <div class="flex-1 flex flex-col">
+    <div *ngIf="!hideSidebarAndNavbar" class="bg-gray-800 text-white p-4">
+      <app-navbar></app-navbar>
+    </div>
+    <div
+      [ngClass]="{
+        'flex-1 bg-white': true,
+        'p-4': !noPadding,
+        'p-0': noPadding
+      }"
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

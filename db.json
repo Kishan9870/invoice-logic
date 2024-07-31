@@ -72,6 +72,16 @@
       "mobileNumber": "7778889910",
       "address": "Test address",
       "terms": true
+    },
+    {
+      "id": "d99c",
+      "firstName": "Brijes",
+      "lastName": "123",
+      "email": "brijesh123@gmail.com",
+      "password": "Test@1234",
+      "mobileNumber": "7746512450",
+      "address": "Test Address",
+      "terms": true
     }
   ]
 }
