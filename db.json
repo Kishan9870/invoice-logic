@@ -62,6 +62,16 @@
       "password": "test@1234",
       "mobileNumber": "9998887776",
       "address": "Test addres 123"
+    },
+    {
+      "id": "e4ad",
+      "firstName": "Test",
+      "lastName": "Test",
+      "email": "test@gmail.com",
+      "password": "Test@123",
+      "mobileNumber": "7778889910",
+      "address": "Test address",
+      "terms": true
     }
   ]
 }

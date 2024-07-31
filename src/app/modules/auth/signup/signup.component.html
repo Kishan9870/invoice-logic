@@ -107,6 +107,15 @@
         </mat-error>
       </mat-form-field>
 
+      <div class="terms mb-4">
+        <mat-checkbox formControlName="terms" class="mb-4">
+          I agree to the terms and conditions
+        </mat-checkbox>
+        <mat-error *ngIf="signupForm.get('terms')?.hasError('required')">
+          You must accept the terms and conditions
+        </mat-error>
+      </div>
+
       <div>
         <button
           type="submit"
