@@ -53,7 +53,7 @@ export class LoginComponent {
       .subscribe((isAuthenticated) => {
         if (isAuthenticated) {
           this.toastrService.success('User authenticated successfully');
-          this.router.navigateByUrl('/add-product');
+          this.router.navigateByUrl('/overview');
         } else {
           this.toastrService.error('Authentication failed');
         }
