@@ -1,0 +1,29 @@
+<mat-sidenav-container class="h-screen">
+  <mat-sidenav #sidenav mode="side" opened class="bg-gray-800 text-white w-64">
+    <div class="flex items-center justify-center p-4">
+      <span class="text-lg font-semibold">My App</span>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" class="flex items-center">
+        <mat-icon class="icon">dashboard</mat-icon>
+        <span class="ml-2 text-lg">Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/profile" class="flex items-center">
+        <mat-icon class="icon">person</mat-icon>
+        <span class="ml-2 text-lg">Profile</span>
+      </a>
+      <a mat-list-item routerLink="/settings" class="flex items-center">
+        <mat-icon class="icon">settings</mat-icon>
+        <span class="ml-2 text-lg">Settings</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="p-4">
+      <button mat-button class="toggle-btn" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
