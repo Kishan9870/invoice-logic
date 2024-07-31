@@ -11,9 +11,9 @@
       <mat-icon class="icon">person</mat-icon>
       <span class="ml-2 text-lg">Profile</span>
     </a>
-    <a mat-list-item routerLink="/settings" class="flex items-center">
-      <mat-icon class="icon">settings</mat-icon>
-      <span class="ml-2 text-lg">Settings</span>
+    <a mat-list-item (click)="onLogout()" class="flex items-center">
+      <mat-icon class="icon">logout</mat-icon>
+      <span class="ml-2 text-lg">Logout</span>
     </a>
   </mat-nav-list>
 </mat-sidenav>
