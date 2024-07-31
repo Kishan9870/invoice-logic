@@ -21,6 +21,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
+  title = 'invoice-logic';
   hideSidebarAndNavbar: boolean = false;
   noPadding: boolean = false;
 
