@@ -14,9 +14,9 @@
             formControlName="firstName"
             placeholder="First Name"
           />
-          <!-- <mat-error *ngIf="signupForm.get('firstName').hasError('required')">
+          <mat-error *ngIf="signupForm.get('firstName')?.hasError('required')">
             First Name is required
-          </mat-error> -->
+          </mat-error>
         </mat-form-field>
 
         <!-- Last name -->
@@ -28,9 +28,9 @@
             formControlName="lastName"
             placeholder="Last Name"
           />
-          <!-- <mat-error *ngIf="signupForm.get('lastName').hasError('required')">
+          <mat-error *ngIf="signupForm.get('lastName')?.hasError('required')">
             Last Name is required
-          </mat-error> -->
+          </mat-error>
         </mat-form-field>
       </div>
 
@@ -42,12 +42,12 @@
           formControlName="email"
           placeholder="Email"
         />
-        <!-- <mat-error *ngIf="signupForm.get('email').hasError('required')">
+        <mat-error *ngIf="signupForm.get('email')?.hasError('required')">
           Email is required
         </mat-error>
-        <mat-error *ngIf="signupForm.get('email').hasError('email')">
+        <mat-error *ngIf="signupForm.get('email')?.hasError('email')">
           Enter a valid email
-        </mat-error> -->
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="w-full">
@@ -58,12 +58,24 @@
           formControlName="password"
           placeholder="Password"
         />
-        <!-- <mat-error *ngIf="signupForm.get('password').hasError('required')">
+        <mat-error *ngIf="signupForm.get('password')?.hasError('required')">
           Password is required
         </mat-error>
-        <mat-error *ngIf="signupForm.get('password').hasError('minlength')">
+        <mat-error *ngIf="signupForm.get('password')?.hasError('minlength')">
           Password must be at least 6 characters long
-        </mat-error> -->
+        </mat-error>
+        <mat-error *ngIf="signupForm.get('password')?.hasError('hasUpperCase')">
+          Password must contain at least one uppercase letter.
+        </mat-error>
+        <mat-error *ngIf="signupForm.get('password')?.hasError('hasLowerCase')">
+          Password must contain at least one lowercase letter.
+        </mat-error>
+        <mat-error *ngIf="signupForm.get('password')?.hasError('hasNumeric')">
+          Password must contain at least one numeric digit.
+        </mat-error>
+        <mat-error *ngIf="signupForm.get('password')?.hasError('hasSpecial')">
+          Password must contain at least one special character.
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="w-full">
@@ -74,12 +86,12 @@
           formControlName="mobileNumber"
           placeholder="Mobile Number"
         />
-        <!-- <mat-error *ngIf="signupForm.get('mobileNumber').hasError('required')">
+        <mat-error *ngIf="signupForm.get('mobileNumber')?.hasError('required')">
           Mobile Number is required
         </mat-error>
-        <mat-error *ngIf="signupForm.get('mobileNumber').hasError('pattern')">
+        <mat-error *ngIf="signupForm.get('mobileNumber')?.hasError('pattern')">
           Enter a valid mobile number
-        </mat-error> -->
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="w-full">
@@ -90,9 +102,9 @@
           formControlName="address"
           placeholder="Address"
         />
-        <!-- <mat-error *ngIf="signupForm.get('address').hasError('required')">
+        <mat-error *ngIf="signupForm.get('address')?.hasError('required')">
           Address is required
-        </mat-error> -->
+        </mat-error>
       </mat-form-field>
 
       <div>

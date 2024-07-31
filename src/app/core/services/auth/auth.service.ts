@@ -23,7 +23,6 @@ export class AuthService {
   }
 
   getUserByEmail(email: string) {
-    debugger;
     return this.httpClient.get<User[]>(`${this.apiUrl}/users?email=` + email);
   }
 

@@ -9,6 +9,8 @@ import { User } from '../../../core/models/user/user';
 import { ToastrService } from 'ngx-toastr';
 import { MatOptionModule } from '@angular/material/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { strongPassword } from '../../../core/validators/password-strength';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-signup',
@@ -22,6 +24,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     // FormBuilder,
     // FormGroup,
     MatOptionModule,
+    CommonModule,
   ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss',
@@ -38,14 +41,16 @@ export class SignupComponent {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: [
+        '',
+        [Validators.required, Validators.minLength(6), strongPassword],
+      ],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       address: ['', Validators.required],
     });
   }
 
   addUser() {
-    debugger;
     if (this.signupForm.valid) {
       this.authService.addUser(this.signupForm.value).subscribe(
         () => {

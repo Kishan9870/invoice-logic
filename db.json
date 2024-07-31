@@ -44,6 +44,24 @@
       "password": "Test@1234",
       "mobileNumber": "9745124512",
       "address": "Test Address "
+    },
+    {
+      "id": "a05c",
+      "firstName": "Kishan",
+      "lastName": "Thummar",
+      "email": "testkishan@gmail.com",
+      "password": "Test@1234",
+      "mobileNumber": "7801444455",
+      "address": "Test address 1234"
+    },
+    {
+      "id": "7221",
+      "firstName": "Brijest",
+      "lastName": "Tester",
+      "email": "brijeshtester@gmail.com",
+      "password": "test@1234",
+      "mobileNumber": "9998887776",
+      "address": "Test addres 123"
     }
   ]
 }

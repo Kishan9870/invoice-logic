@@ -5,12 +5,13 @@ import { AddProductComponent } from './modules/product/add-product/add-product.c
 import { OverviewComponent } from './modules/dashboard/overview/overview.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'login',
     component: LoginComponent,
   },
   {
-    path: '',
+    path: 'signup',
     component: SignupComponent,
   },
   {
